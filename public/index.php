@@ -37,7 +37,7 @@
     /**
      * Send an email
      */
-    $email_to = 'mdbdrrhm@icloud.com';
+    $email_to = 'm.abdurrah@gmail.com';
     $from = $_ENV['USERNAME'];
     $subject = "Message from $from";
     $message = 'This is a test!';
@@ -78,7 +78,22 @@
 
 
     $mail->Subject = 'An email sent from PHP';
-    $mail->Body    = '<h1>Hello!</h1> <p>This <strong>email</strong> has been sent from PHP!</p>';
+
+    $mail->Body = '<h1 style="font-style: italic;">Hello</h1>'
+        . "\n"
+        . '<p style="color: #f00;">This is an email with some <span style="color: #0000cd">CSS styles</span>.</p>';
+
+    $mail->AltBody = "Hello.\nThis is the body in plain text for non-HTML mail clients";
+
+//    $mail->Body = '<h2>External Image</h2>'
+//        . '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/265px-Red_Apple.jpg">'
+//        . "\n"
+//        . '<h2>Embedded Image</h2>'
+//        . '<img src="cid:banana">';
+//
+//    $mail->AddEmbeddedImage(dirname(__FILE__) . '/banana.png', 'banana');
+
+//    $mail->Body    = '<h1>Hello!</h1> <p>This <strong>email</strong> has been sent from PHP!</p>';
 //    $mail->addAttachment(dirname(__FILE__) . '/example.pdf');
 //
 //    $mail->setFrom($_ENV['USERNAME']);
