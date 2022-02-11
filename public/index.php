@@ -50,6 +50,7 @@
     $mail->Password = $_ENV['PASSWORD'];
     $mail->SMTPSecure = 'tls';
     $mail->CharSet = 'UTF-8';
+    $mail->isHTML(true);
 
 
     /**
@@ -77,8 +78,8 @@
 
 
     $mail->Subject = 'An email sent from PHP';
-    $mail->Body = 'This is a merely a test message';
-    $mail->addAttachment(dirname(__FILE__) . '/example.pdf');
+    $mail->Body    = '<h1>Hello!</h1> <p>This <strong>email</strong> has been sent from PHP!</p>';
+//    $mail->addAttachment(dirname(__FILE__) . '/example.pdf');
 //
 //    $mail->setFrom($_ENV['USERNAME']);
 //    $mail->addAddress($email);
